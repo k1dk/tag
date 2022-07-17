@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divbrpspan</title>
+    <style>
+        div,p,span{
+            border: solid 1px black;
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h3>div와 p는 블록요소 이고, span은 인라인 요소입니다. 또한 p는 문자 단락 용도이고, div는 레이아웃 계층 나누기 용도입니다.</h3>
+
+    <div>div 태그</div>
+    <p>p 태그</p>
+    <span>span 태그</span>
+    <br>
+    블록 요소는 아래 그림의 div, p 처럼 태그의 영역이 브라우저의 양 끝을 모두 차지합니다.<br>
+    반면 인라인 요소는 그림의 span 태그의 영역 처럼 태그 안에 적힌 문자 정보의 길이만큼만 영역을 차지합니다.<br>
+    따라서 문자 정보를 줄바꿈을 하면서 작성해야 할 경우 
+    div, p 태그를 사용해야 합니다.<br>
+    반면 줄바꿈 없이 사용 영역만 작성하고 다른 블록 요소 등에 포함되어야 할 경우 span 태그와 같은 인라인 요소를 사용하면 됩니다.
+    <h3>span 은 div, p 를 포함할 수 없다.</h3>
+    인라인 요소인 span 태그는 블록 요소인 div, p 태그를 하위 태그로 포함시킬 수 없습니다.<br>
+    <span>span 태그
+        <div>div 태그</div>
+        <p>p 태그</p>
+    </span>
+    <br>코끼리를 냉장고에 넣는 것 처럼 더 작은 영역의 요소인 span 태그가 더 큰 영역을 가진 div, p 태그를 포함하려고 하니 레이아웃이 엉망이 됩니다.<br><br>
+
+    반면 더 영역이 큰 블록 요소인 div 와 p 태그는 인라인 요소인 span 태그를 포함할 수 있습니다.
+    <div><span>span 태그</span></div>
+    <p><span>span 태그</span></p>
+
+    <h3> p 태그는 div 태그를 포함할 수 없다.</h3>
+    그럼 같은 블록 요소인 div, p 태그의 차이점은 무엇일까요? 두 태그 모두 문자 정보를 출력할 수 있으며 블록 요소로 자동 줄바꿈으로 단락이 형성됩니다.
+    <br>
+    p 태그는 문자 정보를 입력하는 단락을 구성합니다. 아래와 같이 p 태그 하위에는 다른 블록 요소가 포함되어서는 안됩니다.
+    p 태그 하위에는 span, a, strong 등과 같은 인라인 요소만 올 수 있습니다.
+    <p><div>Hello World!</div></p>
+    와 같은 형태가 있다면, 
+    <div><p>Hello World!</p></div>
+    와 같은 형태로 변경해야 합니다.<br>
+    <h3>div 태그는 p 태그를 포함할 수 있다.</h3>
+    div 태그는 p 태그 처럼 문자 정보를 입력할 수 있지만, 실제 용도는 HTML 문서의 영역별 구분입니다. 각 영역의 용도를 구분하는 기능이므로 다른 블록 요소가 하위에 포함될 수 있습니다.
+    예를 들어 웹페이지에서 어떤 영역이 헤더 영역이고, 네비게이션 메뉴 영역, 본문 기사 영역 등의 영역 구분을 할 때 div 태그를 여러겹 겹쳐서 사용합니다.
+    <div id="title">
+        <div id = navigator>
+        </div>
+        <div id = content>
+            <p>본문</p>
+        </div>
+    </div>
+    div 태그의 영역별 구분이 발전되어서 표현된 값이 article, nav 등의 태그입니다. div 태그의 목적은 영역 구분이므로 하위에 p 태그와 같은 다른 블록 요소를 포함할 수 있습니다.
+    <h4>정리하면, 텍스트 정보는 p 태그 안에 작성합니다. 그 밖의 다른 영역을 나누는 용도는 div 태그를 중복으로 겹쳐서 사용합니다.</div>
+</body>
+</html>

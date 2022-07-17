@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dldtdd</title>
+</head>
+<body>
+    <h1>dl 태그 (Definition List)</h1>
+    정의 목록을 나타내는 태그이다.
+    특정 용어에 대해 정의하는 제목과 그 제목에 대한 설명을 담는다.
+    기본적으로 block요소의 속성을 갖고 있다.
+    <h1>dt 태그 (Definition Term)</h1>
+    정의되는 용어에 대한 제목을 나타낸다.
+    기본적으로 block요소의 속성을 갖고 있다.
+    <h1>dd 태그</h1>
+    정의된 제목에 대한 설명을 나타낸다.
+    기본적으로 block요소의 속성을 갖고 있다.
+    <dl>
+        <dt>정의 제목</dt>
+        <dd>정의 설명</dd>
+    </dl>
+    기본적으로 dt와 dd 태그를 따로 스타일을 주지 않고 출력을 하게되면 dd태그의 들여쓰기가 된 상태에서 출력이 된다.<br>
+    그래서 원하는 화면을 만들기 위해서는 margin값을 조정하거나 float, display:inline-block 등 별도의 스타일을 추가해야한다.<br>
+    또한 여러개의 dt태그와 하나의 dd태그의 구성,하나의 dt태그와 여러개의 dd태그의 구성 등의 표현이 가능하다.
+    <dl>
+        <dt>정의 제목1</dt>
+        <dt>정의 제목2</dt>
+        <dt>정의 제목3</dt>
+        <dd>정의 설명</dd>
+    </dl>
+     
+    <dl>
+        <dt>정의 제목1</dt>
+        <dt>정의 제목2</dt>
+        <dt>정의 제목3</dt>
+        <dd>정의 설명1</dd>
+        <dd>정의 설명2</dd>
+        <dd>정의 설명3</dd>
+    </dl>
+     
+    <dl>
+        <dt>정의 제목</dt>
+        <dd>정의 설명1</dd>
+        <dd>정의 설명2</dd>
+        <dd>정의 설명3</dd>
+    </dl>
+
+    <a href="https://aoa.gitbook.io/skymimo/aoa-2019/tips-2/dl-dt-dd-.">dl, dt, dd 태그를 남용하지 마세요.</a>
+</body>
+</html>
